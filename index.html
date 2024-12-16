@@ -1,13 +1,49 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <link rel="icon" type="image/svg+xml" href="/tv-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Meta Tags -->
+    <title>ReactTV - Retro TV Webcam Experience</title>
+    <meta name="title" content="ReactTV - Retro TV Webcam Experience">
+    <meta name="description" content="Transform your webcam feed into a nostalgic retro TV experience with realistic CRT effects">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://reacttv.prateekkeshari.com/">
+    <meta property="og:title" content="ReactTV - Retro TV Webcam Experience">
+    <meta property="og:description" content="Transform your webcam feed into a nostalgic retro TV experience with realistic CRT effects">
+    <meta property="og:image" content="https://reacttv.prateekkeshari.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://reacttv.prateekkeshari.com/">
+    <meta property="twitter:title" content="ReactTV - Retro TV Webcam Experience">
+    <meta property="twitter:description" content="Transform your webcam feed into a nostalgic retro TV experience with realistic CRT effects">
+    <meta property="twitter:image" content="https://reacttv.prateekkeshari.com/og-image.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+
+    <!-- iOS specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   </head>
-  <body>
+  <body class="bg-white dark:bg-black text-black dark:text-white antialiased">
     <div id="root"></div>
+    <div class="noise"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
