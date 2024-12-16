@@ -56,9 +56,10 @@ function App() {
   }, []);
 
   const handlePowerToggle = () => {
-    setIsPowered(!isPowered);
+    setIsPowered(prev => !prev);
     if (videoRef.current) {
       if (isPowered) {
+        videoRef.current.classList.remove('tv-turn-on');
         videoRef.current.classList.add('tv-turn-off');
       } else {
         videoRef.current.classList.remove('tv-turn-off');
