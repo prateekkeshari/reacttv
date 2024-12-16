@@ -1,4 +1,4 @@
-# BerTV - Retro TV Webcam Experience 🎥 📺
+# ReactTV - Retro TV Webcam Experience 🎥 📺
 
 Your webcam feed into a nostalgic retro TV experience.
 
