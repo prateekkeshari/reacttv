@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 const TVScreen = ({ videoRef, isLoading, hasPermission, isPowered, channel }) => {
   return (
     <div className="tv-screen-outer">
-      <div className="tv-screen w-[480px] h-[360px] relative">
+      <div className="tv-screen w-full aspect-[4/3] relative">
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-black">
-            <div className="animate-spin rounded-full h-8 w-8 border-4 border-gray-600 border-t-gray-400"></div>
+            <div className="animate-spin rounded-full h-6 w-6 sm:h-8 sm:w-8 border-4 border-gray-600 border-t-gray-400"></div>
           </div>
         )}
 
         {!hasPermission && !isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-black">
             <div className="text-white/60 flex flex-col items-center gap-2">
-              <FiCamera className="w-8 h-8" />
-              <span className="text-xs font-mono">NO SIGNAL</span>
+              <FiCamera className="w-6 h-6 sm:w-8 sm:h-8" />
+              <span className="text-[10px] sm:text-xs font-mono">NO SIGNAL</span>
             </div>
           </div>
         )}
@@ -37,7 +37,7 @@ const TVScreen = ({ videoRef, isLoading, hasPermission, isPowered, channel }) =>
           }}
         />
         
-        <div className="channel-text">CH {channel}</div>
+        <div className="channel-text text-xs sm:text-sm">CH {channel}</div>
       </div>
     </div>
   );

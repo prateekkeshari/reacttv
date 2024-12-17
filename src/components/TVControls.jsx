@@ -68,9 +68,9 @@ const TVControls = ({ onChannelChange, onVolumeChange, volume }) => {
   };
 
   return (
-    <div className="flex gap-6 items-center">
+    <div className="flex gap-4 sm:gap-6 items-center">
       <button 
-        className="tv-dial" 
+        className="tv-dial w-12 h-12 sm:w-16 sm:h-16" 
         onClick={handleChannelClick}
         title="Channel"
         aria-label="Change channel"
@@ -78,11 +78,11 @@ const TVControls = ({ onChannelChange, onVolumeChange, volume }) => {
           transform: `rotate(${channelRotation}deg)`
         }}
       >
-        <span className="channel-text">CH</span>
+        <span className="channel-text text-xs sm:text-sm">CH</span>
       </button>
       <button 
         ref={volumeDialRef}
-        className="tv-dial"
+        className="tv-dial w-12 h-12 sm:w-16 sm:h-16"
         onMouseDown={handleVolumeMouseDown}
         title={`Volume: ${Math.round(volume)}%`}
         aria-label="Adjust volume"
@@ -90,7 +90,7 @@ const TVControls = ({ onChannelChange, onVolumeChange, volume }) => {
           transform: `rotate(${(volume / 100) * 270 - 135}deg)`
         }}
       >
-        <span className="channel-text">VOL</span>
+        <span className="channel-text text-xs sm:text-sm">VOL</span>
       </button>
     </div>
   );

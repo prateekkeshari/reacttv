@@ -105,9 +105,9 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-violet-50 flex items-center justify-center p-8">
-      <div className="tv-container">
-        <div className="relative flex flex-col gap-8">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-violet-50 flex items-center justify-center p-4 sm:p-8">
+      <div className="tv-container w-full max-w-[480px]">
+        <div className="relative flex flex-col gap-4 sm:gap-8">
           <TVScreen
             videoRef={videoRef}
             isLoading={isLoading}
@@ -133,7 +133,7 @@ function App() {
             </div>
           )}
 
-          <div className="flex items-center justify-between px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 gap-4">
             <TVControls
               onChannelChange={handleChannelChange}
               onVolumeChange={handleVolumeChange}
@@ -143,12 +143,12 @@ function App() {
           </div>
         </div>
 
-        <div className="absolute bottom-4 right-8">
-          <span className="text-sm text-gray-600 font-mono tracking-widest">REACTTV</span>
+        <div className="absolute bottom-4 right-4 sm:right-8">
+          <span className="text-xs sm:text-sm text-gray-600 font-mono tracking-widest">REACTTV</span>
         </div>
 
         <button 
-          className="power-button absolute top-6 right-8 w-3 h-3 rounded-full bg-red-500 
+          className="power-button absolute top-4 sm:top-6 right-4 sm:right-8 w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-red-500 
                      shadow-[0_0_5px_rgba(239,68,68,0.5)]"
           onClick={handlePowerToggle}
           title="Power"
